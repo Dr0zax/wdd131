@@ -17,10 +17,10 @@
 }
 
 main {
-    text-align: center
+    text-align: center;
 }
 
 #hero-title {
     font-size: 4rem;
-    animation: oscilate 3s ease-in-out infinite;
+    /* animation: oscilate 3s ease-in-out infinite; */
 }
