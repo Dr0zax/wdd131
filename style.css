@@ -1,17 +1,3 @@
-@keyframes oscilate {
-    0% {
-        transform: rotate(-5deg);
-    }
-
-    50% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(-5deg);
-    }
-}
-
 * {
     box-sizing: border-box;
 }
@@ -22,5 +8,4 @@ main {
 
 #hero-title {
     font-size: 4rem;
-    /* animation: oscilate 3s ease-in-out infinite; */
 }
