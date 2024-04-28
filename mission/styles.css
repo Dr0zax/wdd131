@@ -4,6 +4,8 @@
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
+    border: solid 1px lightgray;
+    padding: 100px 200px;
 }
 
 header {
