@@ -1,27 +1,66 @@
+/* https://coolors.co/fff7f8-ef5b5b-0081af-678d58-13070c*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7F8;
+}
+
+header {
+    /* background-color: #A3CEF1; */
+}
+
+nav {
+    padding: 10px;
+}
+
 ul
 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     list-style-type: none;
-
+    padding: 0;
 }
 
 ul a {
     text-decoration: none;
     color: black;
-    transition: background-color 250ms, color 250ms;
     padding: 10px;
+    border: 2px solid #0081AF;
+    border-radius: 10px;
+    transition: background-color 200ms ease, color 200ms ease;
 }
 
 ul a:hover {
-    background-color: grey;
+    background-color: #0081AF;
     color: white;
 }
 
-main {
+li {
+    transition: transform 500ms ease;
+}
+
+li:hover {
+    transform: scale(1.1);
+}
+
+#hero {
     text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+} 
+
+p, a{
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
