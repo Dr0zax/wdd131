@@ -1,132 +1,161 @@
 /* https://coolors.co/fff7f8-ef5b5b-0081af-678d58-13070c */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(50%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #FFF7F8;
+  margin: 0;
+  padding: 0;
+  background-color: #fff7f8;
 }
 
 nav {
-    padding: 10px;
+  padding: 10px;
 }
 
-ul
-{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style-type: none;
-    padding: 0;
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
 ul a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border: 2px solid #0081AF;
-    border-radius: 10px;
-    transition: background-color 200ms ease, color 200ms ease;
+  background-color: #fff7f8;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  border: 2px solid #0081af;
+  border-radius: 10px;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 ul a:hover {
-    background-color: #0081AF;
-    color: white;
+  background-color: #0081af;
+  color: white;
 }
 
 li {
-    transition: transform 500ms ease;
+  transition: transform 500ms ease;
 }
 
-li:hover{
-    transform: scale(1.1);
+li:hover {
+  transform: scale(1.1);
 }
 
 #hero {
-    text-align: center;
+  text-align: center;
 }
 
 #name {
-    display: flex;
-    flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 1fr 1px 1fr; */
-    justify-items: center;
-    align-items: center;
-    text-shadow: 2px 2px #0081AF;
-
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-shadow: 2px 2px #0081af;
 }
 
 #first {
-    animation: slideInLeft 1500ms ease;
+  margin-left: 50px;
+  animation: slideInLeft 1500ms ease;
 }
 
 #last {
-    animation: slideInRight 1500ms ease;
+  animation: slideInRight 1500ms ease;
 }
 
 #logo {
-    box-sizing: border-box;
-    width: 100px;
-    border-radius: 50%;
-    transition: transform 500ms ease, box-shadow 500ms ease;
-
+  box-sizing: border-box;
+  width: 100px;
+  border-radius: 50%;
+  transition: transform 500ms ease, box-shadow 500ms ease;
 }
 
-#logo:hover{
-    box-shadow: 0px 0px 5px black;
-    transform: rotate(360deg) scale(1.1);
+#logo:hover {
+  transform: rotate(360deg) scale(1.1);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rubik', sans-serif;
-} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+}
 
-p, a{
-    font-family: 'Montserrat', sans-serif;
+p,
+a {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 31px;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
-p {
-    background-color: #0080af;
-    color: #FFF7F8;
-    padding: 10px;
-    border-radius: 10px;
+h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+main p {
+  border: #0081af 2px solid;
+  /* background-color: #0080af; */
+  /* color: #FFF7F8; */
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 #content {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  margin: 0 5px;
+}
+
+footer a img {
+  width: 40px;
 }
