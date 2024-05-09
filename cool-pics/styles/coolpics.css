@@ -1,0 +1,39 @@
+*  {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #52489c;
+    padding: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    color: white;
+    background-color: #52489c;
+}
+
+h1 {
+    text-align: center;
+}
