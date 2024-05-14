@@ -1,6 +1,17 @@
-/* https://coolors.co/fff7f8-ef5b5b-0081af-678d58-13070c */
+/* https://coolors.co/4059ad-6b9ac4-97d8c4-eff2f1-f4b942 */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: #4059AD;
+  --secondary-color: #97D8C4;
+  --accent-color: #F4B942;
+
+  --light-background: #EFF2F1;
+  --dark-background: #161F3C;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Rubik", sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -33,7 +44,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff7f8;
+  background-color: var(--light-background);
 }
 
 nav {
@@ -49,26 +60,36 @@ ul {
 }
 
 ul a {
-  background-color: #fff7f8;
+  background-color: var(--light-background);
   text-decoration: none;
   color: black;
   padding: 0.5rem;
-  border: 2px solid #0081af;
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
-  transition: background-color 200ms ease, color 200ms ease;
+  box-shadow: 0px 0px 0px var(--accent-color);
+  transition: box-shadow 200ms ease;
 }
 
 ul a:hover {
-  background-color: #0081af;
-  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0px 5px 0px var(--accent-color);
+  color: var(--light-background);
 }
 
 li {
-  transition: transform 500ms ease;
+  transition: transform 200ms ease;
 }
 
 li:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
+}
+
+select {
+  background-color: #EFF2F1;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-family: "montserrat", sans-serif;
 }
 
 #hero {
@@ -82,7 +103,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  text-shadow: 2px 2px #0081af;
+  text-shadow: 2px 2px var(--primary-color);
 }
 
 #first {
@@ -111,13 +132,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: var(--secondary-font);
 }
 
 p,
 a {
   font-size: 21px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--primary-font);
   line-height: 31px;
 }
 
@@ -131,11 +152,15 @@ h2 {
 }
 
 main p {
-  border: #0081af 2px solid;
+  border: var(--primary-color) 2px solid;
   /* background-color: #0080af; */
   /* color: #FFF7F8; */
   padding: 1rem;
   border-radius: 10px;
+}
+
+main {
+  padding: 1em;
 }
 
 #content {
@@ -158,4 +183,51 @@ footer a {
 
 footer a img {
   width: 40px;
+}
+
+.dark {
+  background-color: var(--dark-background);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #EFF2F1;
+}
+
+.dark p {
+  border: none;
+  color: #EFF2F1;
+}
+
+.dark ul a {
+  background-color: var(--dark-background);
+  color: #EFF2F1;
+}
+
+.dark ul a:hover {
+  background-color: var(--primary-color);
+}
+
+.dark select {
+  background-color: var(--dark-background);
+  color: #EFF2F1;
+}
+
+@media screen and (max-width: 900px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #name {
+    flex-direction: column;
+  }
+
+  #first {
+    margin-left: 0;
+  }
 }
