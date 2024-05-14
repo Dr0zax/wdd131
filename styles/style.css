@@ -85,7 +85,7 @@ li:hover {
 }
 
 select {
-  background-color: #EFF2F1;
+  background-color: var(--light-background);
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   padding: 0.5rem;
@@ -153,8 +153,6 @@ h2 {
 
 main p {
   border: var(--primary-color) 2px solid;
-  /* background-color: #0080af; */
-  /* color: #FFF7F8; */
   padding: 1rem;
   border-radius: 10px;
 }
@@ -195,17 +193,17 @@ footer a img {
 .dark h4,
 .dark h5,
 .dark h6 {
-  color: #EFF2F1;
+  color: var(--light-background);
 }
 
 .dark p {
   border: none;
-  color: #EFF2F1;
+  color: var(--light-background);
 }
 
 .dark ul a {
   background-color: var(--dark-background);
-  color: #EFF2F1;
+  color: var(--light-background);
 }
 
 .dark ul a:hover {
@@ -214,7 +212,7 @@ footer a img {
 
 .dark select {
   background-color: var(--dark-background);
-  color: #EFF2F1;
+  color: var(--light-background);
 }
 
 @media screen and (max-width: 900px) {
