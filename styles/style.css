@@ -7,8 +7,8 @@
   --secondary-color: #97D8C4;
   --accent-color: #F4B942;
 
-  --light-background: #EFF2F1;
-  --dark-background: #161F3C;
+  --light-color: #EFF2F1;
+  --dark-color: #161F3C;
   --primary-font: "Montserrat", sans-serif;
   --secondary-font: "Rubik", sans-serif;
 }
@@ -44,7 +44,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--light-background);
+  background-color: var(--light-color);
 }
 
 nav {
@@ -61,7 +61,7 @@ ul {
 }
 
 ul a {
-  background-color: var(--light-background);
+  background-color: var(--light-color);
   text-decoration: none;
   color: black;
   padding: 0.5rem;
@@ -74,7 +74,7 @@ ul a {
 ul a:hover {
   background-color: var(--primary-color);
   box-shadow: 0px 5px 0px var(--accent-color);
-  color: var(--light-background);
+  color: var(--light-color);
 }
 
 li {
@@ -86,11 +86,11 @@ li:hover {
 }
 
 select {
-  background-color: var(--light-background);
+  background-color: var(--light-color);
   border: 2px solid var(--primary-color);
   border-radius: 10px;
   padding: 0.5rem;
-  font-family: "montserrat", sans-serif;
+  font-family: var(--primary-font);
 }
 
 #hero {
@@ -185,7 +185,7 @@ footer a img {
 }
 
 .dark {
-  background-color: var(--dark-background);
+  background-color: var(--dark-color);
 }
 
 .dark h1,
@@ -194,17 +194,17 @@ footer a img {
 .dark h4,
 .dark h5,
 .dark h6 {
-  color: var(--light-background);
+  color: var(--light-color);
 }
 
 .dark p {
   border: none;
-  color: var(--light-background);
+  color: var(--light-color);
 }
 
 .dark ul a {
-  background-color: var(--dark-background);
-  color: var(--light-background);
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 .dark ul a:hover {
@@ -212,8 +212,8 @@ footer a img {
 }
 
 .dark select {
-  background-color: var(--dark-background);
-  color: var(--light-background);
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 @media screen and (max-width: 900px) {
