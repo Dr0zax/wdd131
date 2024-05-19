@@ -44,6 +44,16 @@ a {
     /* text-decoration: none; */
 }
 
+.hide {
+    display: none;
+}
+
+.menu-bttn {
+    border: none;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
 footer {
     color: white;
     background-color: #52489c;
@@ -56,14 +66,6 @@ h1, h2 {
     font-family: "Mooli", sans-serif;
 }
 
-.menu {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    border: none;
-    background-color: var(--primary-color);
-    font-size: 1.8rem;
-}
-
 .gallery {
     display: flex;
     flex-direction: column;
@@ -72,7 +74,7 @@ h1, h2 {
     gap: 10px;
 }
 
-img {
+.gallery img {
     max-width: 100%;
     width: 250px;
     height: 250px;
@@ -85,15 +87,44 @@ img {
     padding: 10px;
     width: 250px;
     height: 250px;
+    margin: 0;
 }
 
-@media screen and (min-width: 900px) {
+.viewer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.close-bttn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.viewer-img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
     ul {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .menu {
+    .menu-bttn {
         display: none;
     }
 
@@ -101,6 +132,15 @@ img {
         display: grid;
         grid-template-columns: 250px 250px 250px;
         grid-template-rows: 250px 250px 250px;
+        justify-content: center;
         gap: 50px;
+    }
+
+    .viewer {
+        margin: 50px
+    }
+
+    .viewer-img {
+        max-height: 100%;
     }
 }
