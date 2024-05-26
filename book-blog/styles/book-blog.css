@@ -1,0 +1,139 @@
+/* https://coolors.co/palette/0d1321-1d2d44-3e5c76-748cab-f0ebd8 */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    --primary-color: #0d1321;
+    --secondary-color: #1d2d44;
+    --accent-color: #3e5c76;
+    --light-color: white;
+    --dark-color: #0d1321;
+    --primary-font: "Montserrat", sans-serif;
+    --secondary-font: "Rubik", sans-serif;
+}
+
+body, head {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.skiptocontent a {
+    color: var(--dark-color);
+    text-decoration: none;
+    position: absolute;
+    top: -40px;
+}
+
+.skiptocontent a:focus {
+    top: 90px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--light-color)
+}
+
+#search-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#search-box {
+    width: 100%;
+    height: 20px;
+}
+
+#search-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-content: center;
+    padding: 20px;
+}
+
+#catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-image-container img {
+    width: 300px;
+    box-shadow: 10px 10px 0px var(--accent-color);
+}
+
+.book-details {
+    text-align: right;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid var(--dark-color);
+}
+
+#filters {
+    padding: 50px;
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+}
+
+p, a {
+    font-size: 21px;
+    line-height: 30px;
+    font-family: var(--secondary-font);
+}
