@@ -1,7 +1,7 @@
 const articles = [
 	{
 		id: 1,
-		title: "Ender's Game",
+		title: "Ender\'s Game",
 		date: 'January 15, 1985',
 		description:
 			'Ender\'s Game is a 1985 military science fiction novel byAmerican author Orson Scott Card. Set at an unspecified date in Earth\'s future, the novel presents an imperiled humankind after two conflicts with an insectoid alien species they dub \"the buggers\".',
