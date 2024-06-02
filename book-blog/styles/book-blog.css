@@ -21,11 +21,6 @@ body, head {
     box-sizing: border-box;
 }
 
-.content {
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -120,6 +115,10 @@ main {
     margin-right: 20px;
     padding-right: 20px;
     border-right: 1px solid var(--dark-color);
+}
+
+.book-details p, .book-details h2 {
+    margin: 10px 0;
 }
 
 #filters {
