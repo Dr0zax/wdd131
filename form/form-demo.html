@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" action="completed.html">
+        <div>
+          <label for="full-name">Full Name: </label>
+          <input type="text" id="full-name" name="full-name" required />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="address">address: </label>
+          <textarea
+            type="text"
+            id="address"
+            name="address"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label for="payment-method">Payment Method: </label>
+          <select name="payment-method" id="payment-method" required>
+            <option value="">Select Payment Method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">Paypal</option>
+          </select>
+        </div>
+        <div class="hide">
+          <label for="credit-card">Credit Card Number</label>
+          <input
+            type="text"
+            id="credit-card"
+            name="credit-card"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            required
+            pattern="[0-9]{16}"
+          />
+        </div>
+        <div class="hide">
+          <label for="paypal">PayPal Username</label>
+          <input
+            type="text"
+            id="paypal"
+            name="paypal"
+            placeholder="paypal username"
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
