@@ -8,7 +8,17 @@ function validateForm(event) {
     // start by assuming the form is valid.
     let isValid = true;
     // add our validations here
-  
+    if (theForm.paymentMethod.value === "creditCard") {
+      if (theForm.creditCard.value !== "1234123412341234") {
+        isValid = false;
+        errors.push("Credit card number is invalid");
+      }
+    }
+
+    if (theForm.fullName.value !== "Bob") {
+      isValid = false;
+      errors.push("You're not Bob");
+    }
     // if we ran into any problems above valid will be false.
     if (!isValid) {
       //stop the form from being submitted
@@ -24,15 +34,28 @@ function validateForm(event) {
     // get a reference to the form. We can access all the named form inputs through the form element.
     const theForm = document.getElementById("checkoutForm");
     // we will also need the creditCardContainer and paypalUsernameContainer
-    const creditCardContainer = document.getElementById("credit-card");
-    const paypalContainer = document.getElementById("paypal");
+    const creditCardContainer = document.getElementById("creditCardContainer");
+    const paypalContainer = document.getElementById("paypalContainer");
   
     // Hide all containers by adding the '.hide' class to each of them
+    creditCardContainer.classList.add("hide");
+    paypalContainer.classList.add("hide");
   
+    // toggle the required attribute on the payment method input
     // Disable required for all fields...if we hide a required field the browser will throw an error when we try to submit!
-  
-  
+
+    theForm.creditCard.required = false;
+    theForm.paypal.required = false;
+
     // Show the container based on the selected payment method, and add the required attribute back.
+    if (e.target.value == "creditCard") {
+      creditCardContainer.classList.remove("hide");
+      theForm.creditCard.required = true;
+
+    } else if (e.target.value == "paypal") {
+      paypalContainer.classList.remove("hide");
+      theForm.paypal.required = true;
+    }
   
   }
   
@@ -44,4 +67,10 @@ function validateForm(event) {
   }
   // attach a change event handler to the paymentMethod input
   
+  let paymentMethod = document.getElementById("paymentMethod");
+  paymentMethod.addEventListener("change", togglePaymentDetails);
+
   // attach a submit event handler to the form
+
+  let form = document.getElementById("checkoutForm");
+  form.addEventListener("submit", validateForm);
