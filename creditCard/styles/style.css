@@ -77,7 +77,7 @@ input {
     grid-template-rows: 1fr 1fr;
 }
 
-#expirationDate {
+.expirationDate {
     display: inline;
     width: 100%;
 }
