@@ -1,0 +1,22 @@
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#students {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#student-image {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+}
+
+.student {
+    border: 1px solid black;
+}
