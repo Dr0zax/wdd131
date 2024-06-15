@@ -3,29 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="portfolio site for wdd130" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/style.css" />
-    <script src="scripts/portal.js" defer></script>
+    <title>WDD131 Homepage</title>
     <meta name="author" content="Andrew Jeppesen" />
-    <title>WDD131 | Andrew Jeppesen</title>
+    <meta name="description" content="WDD131 Homepage" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <div id="content">
       <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mission/index.html">Mission Statment</a></li>
-            <li><a href="cool-pics/index.html">Cool Pics</a></li>
-            <li><a href="book-blog/book-blog.html">Blog</a></li>
-            <li><a href="creditCard/index.html">Credit Card</a></li>
-            <select name="theme" id="theme-selector">
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </ul>
-        </nav>
+        <div class="dropdown" id="projects-dropdown">
+          <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="mission/index.html">Mission Statment</a>
+            <a href="cool-pics/index.html">Cool Pics</a>
+            <a href="book-blog/book-blog.html">Blog</a>
+            <a href="creditCard/index.html">Credit Card</a>
+          </div>
+        </div>
         <div id="hero">
           <div id="name">
             <h1 id="first">Andrew</h1>
@@ -35,6 +30,10 @@
             <h1 id="last">Jeppesen</h1>
           </div>
         </div>
+        <select name="theme" id="theme-selector">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </header>
       <main>
         <h2>About Me</h2>
@@ -59,5 +58,6 @@
         </div>
       </footer>
     </div>
+    <script src="scripts/portal.js"></script>
   </body>
 </html>
