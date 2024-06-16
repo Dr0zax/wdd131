@@ -25,15 +25,27 @@
   }
 }
 
-@keyframes dropdown-fade-out {
+@keyframes name-slide-in-left {
   0% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateX(-100px);
   }
 
   100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes name-slide-in-right {
+  0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -56,6 +68,20 @@ header {
   padding: 0.5rem;
 }
 
+#first {
+  margin-left: 50px;
+  animation: name-slide-in-left 1000ms ease;
+}
+
+#last {
+  animation: name-slide-in-right 1000ms ease;
+}
+
+.hide {
+  display: none;
+}
+
+
 .dropbtn {
   background-color: var(--light-color);
   text-decoration: none;
@@ -65,6 +91,12 @@ header {
   border-radius: 10px;
   box-shadow: 0px 0px 0px var(--accent-color);
   transition: box-shadow 200ms ease, transform 200ms ease, border-radius 100ms ease;
+}
+.clicked {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 0;
+  border-bottom: 0;
 }
 
 .dropbtn:hover {
@@ -79,7 +111,7 @@ header {
 
 .dropdown-content {
   background-color: var(--light-color);
-  display: none;
+  /* display: none; */
   position: absolute;
   min-width: 160px;
   z-index: 1;
@@ -257,4 +289,18 @@ footer a img {
 .dark select {
   background-color: var(--dark-color);
   color: var(--light-color);
+}
+
+@media screen and (max-width: 700px) {
+  #name {
+    flex-direction: column;
+  }
+
+  #first {
+    margin: 0;
+  }
+
+  #last {
+    margin: 0;
+  }
 }

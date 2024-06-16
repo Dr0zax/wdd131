@@ -19,3 +19,39 @@ function changeTheme() {
 }
 
 themeSelector.addEventListener("change", changeTheme)
+
+const dropdown = document.querySelector(".dropdown");
+const dropdown_content = dropdown.querySelector(".dropdown-content");
+const dropdown_button = dropdown.querySelector(".dropbtn");
+let is_mobile = false
+let dropdown_open = false
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth <= 700) {
+        is_mobile = true
+    } else {
+        is_mobile = false
+    }
+})
+
+window.onload = () => {
+    if (window.innerWidth <= 700) {
+        is_mobile = true
+    } else {
+        is_mobile = false
+    }
+}
+
+dropdown_button.addEventListener("click", () => {
+    if (is_mobile) {
+        if (dropdown_open) {
+            dropdown_open = false
+            dropdown_content.classList.add("hide")
+            dropdown_button.classList.remove("clicked")
+        } else {
+            dropdown_open = true
+            dropdown_content.classList.remove("hide")
+            dropdown_button.classList.add("clicked")
+        }
+    }
+})
