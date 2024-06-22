@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Amatic SC";
+    }
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 1rem;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 1rem;
+}
+
+#logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+#logo-image {
+    max-width: 100px;
+}
+
+.search-wrapper {
+    border: 1px solid black;
+    position: relative;
+    border-radius: 0.2rem;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+}
+
+#search-box {
+    width: 100%;
+}
+
+#search-box,
+#search-button {
+    background-color: transparent;
+    border: 0;
+}
+
+#search-button {
+    border-left: 1px solid black;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    padding: 1rem;
+}
+
+.recipe {
+    display: flex;
+    gap: 1rem;
+    border: 2px solid lightgrey;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.recipe-title {
+    color: var(--primary-color);
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.tag {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+.tag p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
+p, a {
+    font-family: var(--primary-font);
+    font-size: 21px;
+}
+
+img {
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.attribution {
+    font-size: 0.6rem;
+    text-align: right;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .recipe {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+}
