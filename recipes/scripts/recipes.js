@@ -5,7 +5,7 @@ const searchBttn = document.querySelector("#search-button");
 
 const recipeTemplate = (recipe) => {
     let tags = recipe.tags.map((tag) => `<li>${tag}</li>`).join("");
-    console.log(tags);
+
     let ratings = [
         `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
         `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
@@ -13,6 +13,7 @@ const recipeTemplate = (recipe) => {
         `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
         `<span aria-hidden="true" class="icon-star-empty">☆</span>`
     ]
+
     for (let i = 0; i < recipe.rating; i++) {
         ratings[i] = `<span aria-hidden="true" class="icon-star">⭐</span>`
     }
@@ -40,15 +41,26 @@ const recipeTemplate = (recipe) => {
 </figure>`;
 }
 
-function init() {
+function renderRecipes(recipesList) {
+    recipesList.forEach((recipe) => {
+        document.querySelector("#recipes").insertAdjacentHTML('beforeend', recipeTemplate(recipe));
+    })
+}
+
+function getRandomRecipe() {
     const randomNum = Math.floor(Math.random()*recipes.length);
     const randomRecipe = recipes[randomNum];
-    document.querySelector("#recipes").innerHTML = recipeTemplate(randomRecipe);
+    return randomRecipe;
+}
+
+function init() {
+    const randomRecipe = getRandomRecipe();
+    renderRecipes([randomRecipe]);
 }
 
 function search(value) {
     if (value !== '') {
-        console.log(recipes.filter((recipe) => recipe.name.toLowerCase().includes(value.toLowerCase())));
+
     }
 }
 
