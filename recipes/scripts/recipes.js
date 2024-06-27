@@ -42,6 +42,7 @@ const recipeTemplate = (recipe) => {
 }
 
 function renderRecipes(recipesList) {
+    document.querySelector("#recipes").innerHTML = "";
     recipesList.forEach((recipe) => {
         document.querySelector("#recipes").insertAdjacentHTML('beforeend', recipeTemplate(recipe));
     })
@@ -58,13 +59,20 @@ function init() {
     renderRecipes([randomRecipe]);
 }
 
-function search(value) {
-    if (value !== '') {
+function filterRecipes(query) {
+    return recipes.filter((recipe) => 
+        recipe.name.toLowerCase().includes(query.toLowerCase()) 
+        || recipe.tags.find((tags) => tags.toLowerCase().includes(query.toLowerCase()))
+    )
+}
 
-    }
+function searchHandler(query) {
+    const filteredRecipes = filterRecipes(query);
+    renderRecipes(filteredRecipes);
 }
 
 searchBar.addEventListener("keyup", (event) => {
+    event.preventDefault();
     if (event.key === "Enter") {
         searchBttn.click();
         event.currentTarget.blur();
@@ -72,8 +80,9 @@ searchBar.addEventListener("keyup", (event) => {
 })
 
 searchBttn.addEventListener("click", (e) => {
-    search(searchBar.value);
-    searchBar.value = "";
+    e.preventDefault();
+    searchHandler(searchBar.value);
+    searchBar.value = '';
 })
 
 window.onload = init;   
