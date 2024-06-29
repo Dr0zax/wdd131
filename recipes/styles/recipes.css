@@ -6,7 +6,7 @@
     --text-dark: #333;
     --text-light: #ebebeb;
     --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: "Amatic SC";
+    --secondary-font: "Amatic SC", sans-serif;
     }
 
 body, html {
@@ -70,6 +70,10 @@ header {
 #search-button {
     border-left: 1px solid black;
     padding: 5px;
+}
+
+#search-button:hover {
+    cursor: pointer;
 }
 
 main {

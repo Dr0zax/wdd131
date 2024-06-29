@@ -1,45 +1,8 @@
 import { recipes } from "./recipes.mjs";
+import { recipeTemplate } from "./templates.js";
 
 const searchBar = document.querySelector("#search-box");
 const searchBttn = document.querySelector("#search-button");
-
-const recipeTemplate = (recipe) => {
-    let tags = recipe.tags.map((tag) => `<li>${tag}</li>`).join("");
-
-    let ratings = [
-        `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
-        `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
-        `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
-        `<span aria-hidden="true" class="icon-star-empty">☆</span>`,
-        `<span aria-hidden="true" class="icon-star-empty">☆</span>`
-    ]
-
-    for (let i = 0; i < recipe.rating; i++) {
-        ratings[i] = `<span aria-hidden="true" class="icon-star">⭐</span>`
-    }
-
-    return `<figure class="recipe">
-	<img src=${recipe.image} alt=${recipe.name} />
-	<figcaption>
-		<ul class="recipe__tags">
-			${tags}
-		</ul>
-		<h2><a href="#">${recipe.name}</a></h2>
-		<p class="recipe__ratings">
-			<span
-				class="rating"
-				role="img"
-				aria-label="Rating: ${recipe.rating} out of 5 stars"
-			>
-                ${ratings.join('')}
-			</span>
-		</p>
-		<p class="recipe__description">
-            ${recipe.description}
-		</p>
-</figcaption>
-</figure>`;
-}
 
 function renderRecipes(recipesList) {
     document.querySelector("#recipes").innerHTML = "";
@@ -79,8 +42,8 @@ searchBar.addEventListener("keyup", (event) => {
     }
 })
 
-searchBttn.addEventListener("click", (e) => {
-    e.preventDefault();
+searchBttn.addEventListener("click", (event) => {
+    event.preventDefault();
     searchHandler(searchBar.value);
     searchBar.value = '';
 })
