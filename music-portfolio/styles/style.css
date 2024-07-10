@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #4C566A;
+    --secondary-color: #88C0D0;
+    --accent1-color: #A3BE8C;
+    --accent2-color: #eceff4;
+
+    --heading-font: "Josefin Sans", sans-serif;
+  --paragraph-font: "Jost", Helvetica, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);  
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: background-color 100ms ease;
+}
+
+
+#logo {
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+}
+
+#text-content {
+    margin-bottom: 20px;
+}
+
+#socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#social-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#social-links a {
+    text-decoration: none;
+    color: black;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
