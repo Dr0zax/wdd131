@@ -13,7 +13,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-size: 21px;
+    font-size: 25px;
     overflow-x: hidden;
 }
 
@@ -22,7 +22,9 @@ html, body {
 }
 
 main {
+    max-width: 1200px;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 .content {
@@ -39,11 +41,20 @@ nav {
     background-color: var(--primary-color);  
 }
 
+
 nav a {
+    z-index: 1;
     text-decoration: none;
     color: var(--accent2-color);
+    text-align: center;
 }
 
+.shadow {
+    position: absolute;
+    background-color: var(--accent1-color);
+    height: 2px;
+
+}
 
 #logo {
     width: 150px;
@@ -80,7 +91,7 @@ nav a {
     padding: 1rem;
     width: 100%;
     box-shadow: 0px 0px 0px var(--primary-color);
-    transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+    transition: box-shadow 200ms ease, transform 200ms ease;
 }
 
 #social-links a:hover {
@@ -89,11 +100,11 @@ nav a {
     transform: translateY(-5px);    
 }
 
-p, a {
+p, a, input, textarea {
     font-family: var(--paragraph-font);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label {
     font-family: var(--heading-font);
 }
 
@@ -101,7 +112,18 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
+    margin-top: 75px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 #links {
@@ -119,7 +141,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
     overflow-y: hidden;
 }
 
@@ -133,7 +155,88 @@ footer {
 }
 
 .gear img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+}
+
+/* contact.html */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+#message {
+    resize: none;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+form div {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    /* gap: 10px; */
+}
+
+#email {
+    margin-right: 20px;
+    font-size: 21px;
+}
+
+#submit {
+    border: 2px solid var(--secondary-color);
+    background: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px var(--primary-color);
+    width: 100%;
+    font-size: 21px;
+    transition: box-shadow 200ms ease, transform 200ms ease;
+    padding: 0;
+}
+
+#submit:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 5px 0px var(--primary-color);
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 1000px) {
+    html, body {
+        font-size: 21px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    #socials {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #social-links {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .gear h2 {
+        font-size: 21px;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #email {
+        margin-right: 0;
+    }
 }
