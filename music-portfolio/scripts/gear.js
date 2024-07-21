@@ -4,7 +4,7 @@ const gearContainer = document.querySelector("#gear-container");
 
 const gearTemplate = (gear) => {
     return `<div class="gear">
-                <img src="${gear.image}" />
+                <img src="${gear.image}" alt="${gear.name}" />
                 <div>
                     <h2>${gear.name}</h2>
                 </div>
